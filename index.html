@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="calculator">
+      <input id="display" readonly />
+      <div id="keys">
+       <button onclick="clearDisplay()" class="white">C</button>
+       <button onclick="handleSpecialOperation('+/-')" class="white">+/-</button>
+       <button onclick="handleSpecialOperation('%')" class="white">%</button>
+       <button onclick="appendToDisplay('/')" class="operator">/</button>
+       <button onclick="appendToDisplay('7')">7</button>
+       <button onclick="appendToDisplay('8')">8</button>
+       <button onclick="appendToDisplay('9')">9</button>
+       <button onclick="appendToDisplay('*')" class="operator">x</button>
+       <button onclick="appendToDisplay('4')">4</button>
+       <button onclick="appendToDisplay('5')">5</button>
+       <button onclick="appendToDisplay('6')">6</button>
+       <button onclick="appendToDisplay('-')" class="operator">-</button>
+       <button onclick="appendToDisplay('1')">1</button>
+       <button onclick="appendToDisplay('2')">2</button>
+       <button onclick="appendToDisplay('3')">3</button>
+       <button onclick="appendToDisplay('+')" class="operator">+</button>
+       <button onclick="toggleScientificMode()" class="pad"><img src="calculator.png" alt="" style="filter: invert(1) brightness(2);" width="30px" ></button>
+       <button onclick="appendToDisplay('0')" class="pad">0</button>
+       <button onclick="appendToDisplay('.')" class="pad">.</button>
+       <button onclick="calculate()" class="operator" class="pad">=</button>
+
+    </div>
+    <!-- <div class="scientificKeys">
+        <button onclick="calculateScientific('sin')">sin</button>
+        <button onclick="calculateScientific('cos')">cos</button>
+        <button onclick="calculateScientific('tan')">tan</button>
+        <button onclick="calculateScientific('log')">log</button>
+        <button onclick="calculateScientific('ln')">ln</button>
+        <button onclick="calculateScientific('sqrt')" >√</button>
+        <button onclick="calculateScientific('exp')">e^</button>
+        <button onclick="calculateScientific('abs')">|x|</button>
+        <button onclick="calculatePower()">x<sup>y</sup></button>
+    </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>
