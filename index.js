@@ -31,8 +31,13 @@ function handleSpecialOperation(operation) {
             break;
 
         case "+/-":
-            display.value = (-value).toString(); // Toggle sign
+            if (display.value.startsWith("-")) {
+                display.value = display.value.slice(1); // Remove the negative sign
+            } else {
+                display.value = "-" + display.value; // Add a negative sign
+            }
             break;
+
 
         default:
             display.value = "Error"; // For unexpected cases
@@ -87,7 +92,7 @@ function appendToDisplay(input) {
     }
 }
 
-// Updated calculate function to handle `^`
+// Calculate function to handle `^`
 function calculate() {
     try {
         // Use `eval` to calculate the value, including exponentiation
